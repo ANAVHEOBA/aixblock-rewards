@@ -23,7 +23,7 @@ pub struct RecordContribution<'info> {
         seeds = [
             b"contribution",
             contributor.key().as_ref(),
-            &contributor.contribution_count.to_le_bytes()
+            &contributor.contribution_count.to_le_bytes(),
         ],
         bump
     )]

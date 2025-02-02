@@ -38,11 +38,11 @@ pub struct DistributeTokens<'info> {
         payer = authority,
         space = DistributionPeriod::SPACE,
         seeds = [
-            b"distribution".as_ref(),
+            b"distribution",
             points_config.key().as_ref(),
             &points_config.current_period.to_le_bytes(),
         ],
-        bump,
+        bump
     )]
     pub distribution_period: Account<'info, DistributionPeriod>,
 }

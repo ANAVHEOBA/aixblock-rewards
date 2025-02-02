@@ -16,13 +16,13 @@ pub mod aixblock_rewards {
         ctx: Context<Initialize>,
         args: InitializeArgs,
     ) -> Result<()> {
-        ctx.accounts.process(args)
+        Initialize::process(ctx, args)
     }
 
     pub fn create_contributor(
         ctx: Context<CreateContributor>,
     ) -> Result<()> {
-        ctx.accounts.process()
+        CreateContributor::process(ctx)
     }
 
     pub fn record_contribution(
